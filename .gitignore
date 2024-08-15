@@ -1,0 +1,7 @@
+**__pycache__/
+
+# virtualenv
+backend/django4/
+
+# sensitive settings.py
+**settings.py
