@@ -1,3 +1,5 @@
+# * BACK-END
+
 **__pycache__/
 
 # Django .venv
@@ -12,3 +14,33 @@ db.sqlite3
 # environment variables
 .env
 
+# * FRONT-END
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules
+
+# Build output directories
+dist
+dist-ssr
+
+# Local environment files
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
