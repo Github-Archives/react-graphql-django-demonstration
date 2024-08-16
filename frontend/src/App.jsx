@@ -1,13 +1,8 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
 import { useQuery } from "@apollo/client"
 import { GET_BOOKS } from "./queries"
 import "./App.css"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const { loading, error, data } = useQuery(GET_BOOKS)
 
   if (loading) return <p>Loading...</p>
