@@ -38,7 +38,7 @@ Visit `http://127.0.0.1:8000/` to see Django app in action.
 
 # React UI
 
-##### Go to `react-graphql-django-demonstration/frontend` and install yarn
+##### Go to `react-graphql-django-demonstration/frontend` and install yarn & yarn packages
 
 ```bash
 yarn
