@@ -36,7 +36,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-##### 3. (Optional) Seed DB with test data
+##### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+##### 4. (Optional) Seed DB with test data
 
 ```bash
 python manage.py seed
@@ -48,7 +54,7 @@ This will start the Django development server, and you should see output in the 
 
 Visit `http://127.0.0.1:8000/` to see Django app in action.
 
-# React UI
+# React UI (built with Vite)
 
 ##### Go to `react-graphql-django-demonstration/frontend` and install yarn + project dependencies
 
