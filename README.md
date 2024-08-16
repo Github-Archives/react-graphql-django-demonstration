@@ -48,6 +48,52 @@ pip install -r requirements.txt
 python manage.py seed
 ```
 
+5. Create PostgreSQL db user
+
+```bash
+createuser db_user_name --interactive --pwprompt
+```
+
+6. Create database (if you haven't already)
+
+```bash
+createdb db_name
+```
+
+7. Update `settings.py`
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'database_name',
+        'USER': 'database_user_name',
+        'PASSWORD': 'your_database_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+```
+
+8. Grant all privileges on the database to the user
+
+```sql
+GRANT ALL PRIVILEGES ON DATABASE your_db_name TO your_username;
+\q
+```
+
+9. Apply migration again to create necessary tables
+
+```bash
+python manage.py makemigrations api
+python manage.py migrate
+```
+
+7. Connect to PostgreSQL
+
+```bash
+psql -U db_user_name -d db_name
+```
+
 **All commands within `/backend` ⤴️**
 
 This will start the Django development server, and you should see output in the terminal indicating that the server is running.
