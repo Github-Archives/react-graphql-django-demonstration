@@ -36,7 +36,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-##### 3. (Optional) Seed DB with test data
+##### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+##### 4. (Optional) Seed DB with test data
 
 ```bash
 python manage.py seed
