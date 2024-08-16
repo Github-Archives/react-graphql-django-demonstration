@@ -1,8 +1,14 @@
 **__pycache__/
 
-# Backend Django
-# virtualenv
+# Django .venv
 backend/django4/
 
 # sensitive settings.py
 **settings.py
+
+# SQLite database which can be recreated locally by running `python manage.py migrate`
+db.sqlite3
+
+# environment variables
+.env
+
