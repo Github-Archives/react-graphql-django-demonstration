@@ -1,18 +1,19 @@
 import graphene
 from graphene_django.types import DjangoObjectType
-from .models import YourModel  # Replace with your actual model
+from .models import Book
 
 
-class YourModelType(DjangoObjectType):
+# * Test Query
+class BookType(DjangoObjectType):
     class Meta:
-        model = YourModel
+        model = Book
 
 
 class Query(graphene.ObjectType):
-    all_your_models = graphene.List(YourModelType)
+    all_books = graphene.List(BookType)
 
-    def resolve_all_your_models(self, info, **kwargs):
-        return YourModel.objects.all()
+    def resolve_all_books(self, info):
+        return Book.objects.all()
 
 
 schema = graphene.Schema(query=Query)

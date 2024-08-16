@@ -23,6 +23,7 @@ from api.schema import schema  # You'll create this schema file in the next step
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
+    # path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path('', include('api.urls')),  # Include the URLs from your 'api' app
 ]
