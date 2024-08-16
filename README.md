@@ -20,6 +20,12 @@ source django4/bin/activate
 
 #### 1. Migrate
 
+Apply the migrations to create the corresponding table in your SQLite database.
+
+```bash
+python manage.py makemigrations api
+```
+
 ```bash
 python manage.py migrate
 ```
@@ -30,7 +36,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-All commands within `/backend` ⤴️
+##### 3. (Optional) Seed DB with test data
+
+```bash
+python manage.py seed
+```
+
+**All commands within `/backend` ⤴️**
 
 This will start the Django development server, and you should see output in the terminal indicating that the server is running.
 
