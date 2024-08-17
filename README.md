@@ -12,7 +12,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-##### Activate my .venv file
+##### Activate **my** .venv file
 
 ```bash
 source django4/bin/activate
@@ -100,6 +100,8 @@ This will start the Django development server, and you should see output in the 
 
 Visit `http://127.0.0.1:8000/` to see Django app in action.
 
+---
+
 # React UI (built with Vite)
 
 ##### Go to `react-graphql-django-demonstration/frontend` and install yarn + project dependencies
@@ -115,3 +117,5 @@ yarn dev
 ```
 
 Visit `http://localhost:5173/` to see React app in action.
+
+If the backend is also running in this current setup they will connect and display database data to the UI
