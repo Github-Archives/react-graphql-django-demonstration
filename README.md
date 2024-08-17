@@ -119,3 +119,21 @@ yarn dev
 Visit `http://localhost:5173/` to see React app in action.
 
 If the backend is also running in this current setup they will connect and display database data to the UI
+
+# Postman Queries
+
+GET `allBooks`
+POST → http://localhost:8000/graphql/
+
+Body (GraphQL - No Schema)
+
+```json
+{
+  allBooks {
+    title
+    author
+    publishedDate
+    # Add other fields as defined in the Book model
+  }
+}
+```
