@@ -3,7 +3,7 @@
 **__pycache__/
 
 # Django .venv
-backend/django4/
+backend/django5/
 
 # sensitive settings.py
 **settings.py
