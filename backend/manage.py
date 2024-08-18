@@ -6,7 +6,9 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'react_graphql_django_demo.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                          'react-graphql-django-demonstration.settings')
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

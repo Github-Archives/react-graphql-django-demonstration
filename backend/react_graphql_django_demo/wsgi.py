@@ -1,5 +1,5 @@
 """
-WSGI config for react_graphql_django_demo project.
+WSGI config for react-graphql-django-demonstration project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'react_graphql_django_demo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      'react-graphql-django-demonstration.settings')
 
 application = get_wsgi_application()
