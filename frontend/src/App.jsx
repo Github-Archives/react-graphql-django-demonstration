@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <h1>Books</h1>
+      <p>{data.book}</p>
       <ul>
         {data.allBooks.map((book, index) => (
           <li key={index}>
