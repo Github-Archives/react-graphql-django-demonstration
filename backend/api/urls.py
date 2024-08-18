@@ -1,7 +1,9 @@
 from . import views
 from django.urls import path
+from .views import submit_data
 
 urlpatterns = [
-    path('', views.home, name='home'),  # Define a view for the root URL
+    # path('', views.home, name='home'),  # Define a view for the root URL
+    path('api/submit', submit_data, name='submit_data'),
     # path("graphql/", csrf_exempt(GraphQLView.as_view(graphiql=True))), # Alternatively, you can use this line to enable the GraphiQL interface
 ]

@@ -1,5 +1,8 @@
 import { useQuery } from "@apollo/client"
 import { GET_BOOKS } from "./queries"
+
+import FormComponent from "./components/FormComponent"
+
 import "./App.css"
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
   return (
     <div>
       <h1>Books</h1>
+      <FormComponent />
       <p>{data.book}</p>
       <ul>
         {data.allBooks.map((book, index) => (
