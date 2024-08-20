@@ -11,6 +11,7 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'react_graphql_django_demo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      'react_graphql_django_demo.settings')
 
 application = get_asgi_application()
