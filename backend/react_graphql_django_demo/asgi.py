@@ -15,7 +15,7 @@ from channels.auth import AuthMiddlewareStack
 from react-graphql-django-demonstration import routing
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'react-graphql-django-demonstration.settings')
+                      'react_graphql_django_demo.settings')
 
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),
