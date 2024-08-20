@@ -15,7 +15,7 @@ source .venv/bin/activate
 ##### Activate **my** .venv file
 
 ```bash
-source django5/bin/activate
+source django6/bin/activate
 ```
 
 #### 1. Migrate
