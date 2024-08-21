@@ -22,9 +22,6 @@ class MyModel(models.Model):
     field2 = models.CharField(max_length=100)
     field3 = models.CharField(max_length=100)
 
-    # def __str__(self):
-    #     return self.field1
-
     # Update models.py: Override the save method in your model to send data to the WebSocket group:
 
     def save(self, *args, **kwargs):
@@ -35,7 +32,6 @@ class MyModel(models.Model):
             {
                 "type": "send_mymodel_data",
                 "data": {
-                    # Include the data you want to send
                     "field1": self.field1,
                     "field2": self.field2,
                     "field3": self.field3

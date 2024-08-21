@@ -1,4 +1,3 @@
-// Form Component
 import { useState } from "react"
 
 const FormComponent = () => {
@@ -16,6 +15,7 @@ const FormComponent = () => {
     })
   }
 
+  // ! Submit form data to backend from here
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
