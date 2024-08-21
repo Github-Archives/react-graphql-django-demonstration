@@ -11,6 +11,7 @@ class Book(models.Model):
     author = models.CharField(max_length=100)
     published_date = models.DateField()
 
+    # TODO: This may need to be fixed
     def __str__(self):
         return self.title
 

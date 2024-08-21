@@ -108,10 +108,18 @@ Visit `http://127.0.0.1:8000/` to see Django app in action.
 
 ##### Other Backend commands
 
-### **Start Daphne Websocket Server for ASGI (This is how we are launching the Backend now)**
+If you want to use Websockets for displaying submitted data to db in real-time use Daphne Server
+
+### Start Daphne Websocket Server for ASGI (This is how we are launching the Backend now)
 
 ```bash
 daphne -p 8000 server.asgi:application
+```
+
+### If you don't need Websocket real-time communication just use
+
+```bash
+python manage.py runserver
 ```
 
 ---
