@@ -47,7 +47,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <h2>Real-Time Data</h2>
+      <h2>Daphne Websocket Server for real-time updates (not using GraphQL)</h2>
       <ul>
         {realTimeData.map((item, index) => (
           <li key={index}>
