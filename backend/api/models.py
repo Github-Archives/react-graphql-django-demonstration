@@ -1,10 +1,9 @@
 from django.db import models
-
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 
 
-# Create your models here.
+# Create your models here...
 # Every class Model is a new table in the database
 # * Test Book Model
 class Book(models.Model):
