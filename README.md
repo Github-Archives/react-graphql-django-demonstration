@@ -106,6 +106,14 @@ This will start the Django development server, and you should see output in the 
 
 Visit `http://127.0.0.1:8000/` to see Django app in action.
 
+##### Other Backend commands
+
+**Start Daphne Websocket Server for ASGI (This is how we are launching the Backend now)**
+
+```bash
+daphne -p 8000 react_graphql_django_demo.asgi:application
+```
+
 ---
 
 # React UI (built with Vite)
