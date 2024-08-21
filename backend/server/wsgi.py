@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'react_graphql_django_demo.settings')
+                      'server.settings')
 
 application = get_wsgi_application()

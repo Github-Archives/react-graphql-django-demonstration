@@ -13,10 +13,10 @@ from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.auth import AuthMiddlewareStack
 # Import 'routing' from the project module
-from react_graphql_django_demo import routing
+from server import routing
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'react_graphql_django_demo.settings')
+                      'server.settings')
 
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),
