@@ -112,11 +112,15 @@ If you want to use Websockets for displaying submitted data to db in real-time u
 
 ### Start Daphne Websocket Server for ASGI (This is how we are launching the Backend now)
 
+Launches an ASGI server, suitable for production, handles both HTTP and WebSocket requests. For your project, which involves real-time data updates via WebSockets, using Daphne is an appropriate choice
+
 ```bash
 daphne -p 8000 server.asgi:application
 ```
 
 ### If you don't need Websocket real-time communication just use
+
+Launches a WSGI server, suitable for development and testing, handles only HTTP requests.
 
 ```bash
 python manage.py runserver
