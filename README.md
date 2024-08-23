@@ -79,7 +79,7 @@ If you haven't already, create the database:
 createdb db_name
 ```
 
-#### 4.3(A) Update `settings.py`
+#### 4.3 **A.** Update `settings.py`
 
 Edit your `settings.py` to configure the PostgreSQL database if not using an `.env` file to store credentials:
 
@@ -97,9 +97,9 @@ DATABASES = {
 
 ```
 
-#### 4.3(B) Update `.env`
+#### 4.3 **B.** Alternatively, Update `.env`
 
-Alternatively, if you prefer to use a `/backend/server/.env` file for your PostgreSQL database credentials instead of storing them in `/backend/server/settings.py`, add the following to your `.env` file and update the credential values.
+If you prefer to use a `/backend/server/.env` file for your PostgreSQL database credentials instead of storing them in `/backend/server/settings.py`, add the following to your `.env` file and update the credential values.
 
 Setting `DEBUG=True` enables debug mode, which provides detailed error pages and additional logging. For production environments, set `DEBUG=False` to avoid exposing sensitive information.
 
