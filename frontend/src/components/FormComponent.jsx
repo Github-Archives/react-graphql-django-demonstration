@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useMutation } from "@apollo/client"
-import { ADD_MYMODEL, GET_BOOKS } from "../queries"
+import { ADD_MYMODEL, GET_BOOKS, GET_LAST_5_MYMODELS } from "../queries"
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ const FormComponent = () => {
   })
 
   const [addMyModel] = useMutation(ADD_MYMODEL, {
-    refetchQueries: [{ query: GET_BOOKS }],
+    refetchQueries: [{ query: GET_BOOKS }, { query: GET_LAST_5_MYMODELS }],
   })
 
   const handleChange = (e) => {
