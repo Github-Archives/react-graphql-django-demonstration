@@ -23,7 +23,7 @@ export const ADD_MYMODEL = gql`
   }
 `
 
-// * Get the last 5 rows from the database
+// * Get the last 5 rows from the database (real-time non graphql non-websocket test temp)
 export const GET_LAST_5_MYMODELS = gql`
   query GetLast5MyModels {
     last5MyModels {
