@@ -1,4 +1,4 @@
-# This is an Example settings file
+# Sample settings.py file for Django(if you are using a settings.py file and not an .env file for storing your database credentials)
 # Users should rename this file to `settings.py` and fill in the required values
 SECRET_KEY = 'your-secret-key-here'
 DEBUG = True
