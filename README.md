@@ -1,4 +1,3 @@
-````markdown
 # React GraphQL Django Demonstration
 
 This project demonstrates the integration of a Django backend with a React frontend using GraphQL. The backend is powered by Django, and the frontend is built with Vite. This guide provides steps to set up and run the project locally.
@@ -12,6 +11,7 @@ Navigate to the backend directory:
 ```bash
 cd react-graphql-django-demonstration/backend/
 ```
+
 ````
 
 Create a virtual environment:
@@ -216,12 +216,4 @@ Make a POST request to the GraphQL endpoint:
 - The project uses SQLite by default, but you can switch to PostgreSQL by following the PostgreSQL setup steps.
 
 ```
-
-### Suggestions:
-1. **Structure:** The structure is streamlined with clear sections for each major task. It’s now easier to follow the steps without missing anything.
-2. **Clarity:** I added clarifications to ensure the purpose of each step is easily understood.
-3. **Consistency:** Commands and steps are consistently formatted, improving readability.
-4. **Additional Notes:** You might consider adding a section for troubleshooting or common issues, which could help users if they run into problems.
-
-Let me know if you need further adjustments!
-```
+````
