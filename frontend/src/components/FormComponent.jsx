@@ -1,10 +1,16 @@
 import { useState } from "react"
+import { useMutation } from "@apollo/client"
+import { ADD_MYMODEL, GET_BOOKS, GET_LAST_5_MYMODELS } from "../queries"
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
     field1: "",
     field2: "",
     field3: "",
+  })
+
+  const [addMyModel] = useMutation(ADD_MYMODEL, {
+    refetchQueries: [{ query: GET_BOOKS }, { query: GET_LAST_5_MYMODELS }],
   })
 
   const handleChange = (e) => {
@@ -15,22 +21,11 @@ const FormComponent = () => {
     })
   }
 
-  // ! Submit form data to backend from here
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch("http://localhost:8000/api/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-      if (response.ok) {
-        console.log("Data submitted successfully")
-      } else {
-        console.error("Error submitting data")
-      }
+      await addMyModel({ variables: { ...formData } })
+      console.log("Data submitted successfully")
     } catch (error) {
       console.error("Error:", error)
     }
