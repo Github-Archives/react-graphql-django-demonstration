@@ -12,8 +12,6 @@ Navigate to the backend directory:
 cd react-graphql-django-demonstration/backend/
 ```
 
-````
-
 Create a virtual environment:
 
 ```bash
@@ -214,6 +212,3 @@ Make a POST request to the GraphQL endpoint:
 
 - Ensure all commands are executed within the `/backend` directory unless otherwise noted.
 - The project uses SQLite by default, but you can switch to PostgreSQL by following the PostgreSQL setup steps.
-
-```
-````
