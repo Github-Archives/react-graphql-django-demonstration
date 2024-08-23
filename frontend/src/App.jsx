@@ -47,8 +47,8 @@ function App() {
       <FormComponent />
       <p>{data.book}</p>
       <ul>
-        {data.allBooks.map((book, index) => (
-          <li key={index}>
+        {data.allBooks.map((book) => (
+          <li key={book.id}>
             <h2>{book.title}</h2>
             <p>Author: {book.author}</p>
             <p>Published Date: {book.publishedDate}</p>
@@ -59,8 +59,8 @@ function App() {
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (
         <ul>
-          {last5Data.last5MyModels.map((item, index) => (
-            <li key={index}>
+          {last5Data.last5MyModels.map((item) => (
+            <li key={item.id}>
               <h2>Table Row</h2>
               <p>Field1: {item.field1}</p>
               <p>Field2: {item.field2}</p>
