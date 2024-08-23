@@ -115,7 +115,7 @@ DB_PORT=5432
 
 #### 4.4 Grant Privileges
 
-Grant the user all privileges on the database:
+Grant the user all privileges on the database then quit out:
 
 ```sql
 GRANT ALL PRIVILEGES ON DATABASE your_db_name TO your_username;
