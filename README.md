@@ -24,7 +24,7 @@ Activate the virtual environment:
 source .venv/bin/activate
 ```
 
-Alternatively, activate **my** specific virtual environment (personal reminder):
+Alternatively, activate **My** specific local virtual environment _(personal reminder)_:
 
 ```bash
 source django6/bin/activate
