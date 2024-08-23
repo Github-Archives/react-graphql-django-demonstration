@@ -141,6 +141,8 @@ psql -U db_user_name -d db_name
 
 #### 5.1 Run with WebSocket Support (Daphne)
 
+_Websocket Functionality currently Disabled/commented out `//`_
+
 For real-time WebSocket communication, use Daphne:
 
 ```bash
