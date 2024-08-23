@@ -11,6 +11,26 @@ function App() {
   const [getLast5MyModels, { loading: loadingLast5, data: last5Data }] =
     useLazyQuery(GET_LAST_5_MYMODELS)
 
+  // Websocket for real-time updates from api_mymodel db table using Daphne server
+  // * From api_mymodel db table
+  // const [realTimeData, setRealTimeData] = useState([])
+  // useEffect(() => {
+  //   // WebSocket Connection: The useEffect hook establishes a WebSocket connection when the component mounts and closes it when the component unmounts.
+  //   const socket = new WebSocket(
+  //     "ws://" + window.location.hostname + ":8000/ws/api_mymodel/"
+  //   )
+  //   socket.onmessage = function (e) {
+  //     const newData = JSON.parse(e.data)
+  //     setRealTimeData((prevData) => [...prevData, newData])
+  //   }
+  //   socket.onclose = function (e) {
+  //     console.error("WebSocket closed unexpectedly")
+  //   }
+  //   return () => {
+  //     socket.close()
+  //   }
+  // }, [])
+
   // * Refetch Data on Data Change:
   // Added a useEffect hook that calls refetch() whenever data changes to ensure the latest data is fetched after a mutation.
   // This ensures that your component will refetch the data from the GraphQL server whenever new data is added, without relying on WebSockets for real-time updates.
