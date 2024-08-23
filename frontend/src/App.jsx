@@ -11,6 +11,13 @@ function App() {
   const [getLast5MyModels, { loading: loadingLast5, data: last5Data }] =
     useLazyQuery(GET_LAST_5_MYMODELS)
 
+  // * Refetch Data on Data Change:
+  // Added a useEffect hook that calls refetch() whenever data changes to ensure the latest data is fetched after a mutation.
+  // This ensures that your component will refetch the data from the GraphQL server whenever new data is added, without relying on WebSockets for real-time updates.
+  useEffect(() => {
+    refetch()
+  }, [data])
+
   // Websocket for real-time updates from api_mymodel db table using Daphne server
   // * From api_mymodel db table
   // const [realTimeData, setRealTimeData] = useState([])
@@ -30,13 +37,6 @@ function App() {
   //     socket.close()
   //   }
   // }, [])
-
-  // * Refetch Data on Data Change:
-  // Added a useEffect hook that calls refetch() whenever data changes to ensure the latest data is fetched after a mutation.
-  // This ensures that your component will refetch the data from the GraphQL server whenever new data is added, without relying on WebSockets for real-time updates.
-  useEffect(() => {
-    refetch()
-  }, [data])
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
