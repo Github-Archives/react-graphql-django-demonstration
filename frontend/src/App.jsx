@@ -29,9 +29,9 @@ function App() {
     <MainLayout>
       {/* The Map */}
       <MapComponent />
-      {/* <FormComponent /> */}
+      <FormComponent />
 
-      {/* <h1>Books</h1>
+      <h1>Books</h1>
       <p>{data.book}</p>
       <ul>
         {data.allBooks.map((book) => (
@@ -41,8 +41,8 @@ function App() {
             <p>Published Date: {book.publishedDate}</p>
           </li>
         ))}
-      </ul> */}
-      {/* <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
+      </ul>
+      <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (
         <ul>
@@ -55,7 +55,7 @@ function App() {
             </li>
           ))}
         </ul>
-      )} */}
+      )}
     </MainLayout>
   )
 }
