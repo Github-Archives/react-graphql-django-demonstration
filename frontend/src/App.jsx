@@ -3,7 +3,7 @@ import { useQuery, useLazyQuery } from "@apollo/client"
 import { GET_BOOKS, GET_LAST_5_MYMODELS } from "./queries"
 import MainLayout from "./layouts/MainLayout"
 import FormComponent from "./components/FormComponent"
-import MapLeaflet from "./components/MapLeaflet"
+import MapComponent from "./components/MapComponent"
 import "./App.css"
 
 function App() {
@@ -27,9 +27,8 @@ function App() {
     // * Main Layout with Header, Footer, and Main Content is anything nested inside MainLayout
     <MainLayout>
       {/* The Map */}
-      <MapLeaflet />
-
-      <FormComponent />
+      <MapComponent />
+      {/* <FormComponent /> */}
 
       {/* <h1>Books</h1>
       <p>{data.book}</p>
@@ -42,8 +41,7 @@ function App() {
           </li>
         ))}
       </ul> */}
-
-      <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
+      {/* <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (
         <ul>
@@ -56,7 +54,7 @@ function App() {
             </li>
           ))}
         </ul>
-      )}
+      )} */}
     </MainLayout>
   )
 }
