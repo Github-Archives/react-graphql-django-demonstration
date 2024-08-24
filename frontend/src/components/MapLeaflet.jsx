@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet"
 
-const Map = () => {
+const MapLeaflet = () => {
   return (
     <div>
       <h1>Hi I am going to be a Map</h1>
@@ -19,4 +19,4 @@ const Map = () => {
   )
 }
 
-export default Map
+export default MapLeaflet
