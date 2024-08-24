@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useQuery, useLazyQuery } from "@apollo/client"
 import { GET_BOOKS, GET_LAST_5_MYMODELS } from "./queries"
 import FormComponent from "./components/FormComponent"
+import ReactLeafletComponent from "./components/ReactLeafletComponent"
 import "./App.css"
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
 
   return (
     <div>
+      <h1>React Leaflet Component</h1>
+      <ReactLeafletComponent />
       <h1>Books</h1>
       <FormComponent />
       <p>{data.book}</p>
