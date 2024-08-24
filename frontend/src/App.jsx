@@ -5,6 +5,7 @@ import MainLayout from "./layouts/MainLayout"
 import FormComponent from "./components/FormComponent"
 import MapComponent from "./components/MapComponent"
 import "./App.css"
+import "leaflet/dist/leaflet.css"
 
 function App() {
   // * From api_book db table
