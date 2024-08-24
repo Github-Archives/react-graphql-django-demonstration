@@ -26,7 +26,6 @@ function App() {
   return (
     // * Main Layout with Header, Footer, and Main Content is anything nested inside MainLayout
     <MainLayout>
-      {/* <div> */}
       {/* Map  Is Here*/}
       <MapLeaflet />
 
@@ -56,7 +55,6 @@ function App() {
           ))}
         </ul> */}
     </MainLayout>
-    // </div>
   )
 }
 
