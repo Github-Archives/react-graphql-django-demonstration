@@ -216,3 +216,14 @@ Make a POST request to the GraphQL endpoint:
 
 - Ensure all commands are executed within the `/backend` directory unless otherwise noted.
 - The project uses SQLite by default, but you can switch to PostgreSQL by following the PostgreSQL setup steps.
+- For package and package dependency checking use `pipdeptree`. Here are some common commands for `pipdeptree`:
+
+```bash
+pipdeptree
+pipdeptree --json
+pipdeptree --freeze
+pipdeptree --reverse
+pipdeptree --exclude <package1> <package2>
+pipdeptree --packages <package_name>
+pipdeptree --help
+```
