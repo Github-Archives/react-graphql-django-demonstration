@@ -30,7 +30,6 @@ function App() {
       {/* The Map */}
       <MapComponent />
       <FormComponent />
-
       <h1>Books</h1>
       <p>{data.book}</p>
       <ul>
