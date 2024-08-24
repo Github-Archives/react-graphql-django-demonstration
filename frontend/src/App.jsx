@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useQuery, useLazyQuery } from "@apollo/client"
 import { GET_BOOKS, GET_LAST_5_MYMODELS } from "./queries"
 import MainLayout from "./layouts/MainLayout"
