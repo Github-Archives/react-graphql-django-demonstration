@@ -15,6 +15,7 @@ body {
   padding: 20px;
 }
 
+/* * Responsive Styles */
 /* todo: set proper screen width break points */
 /* when the width is < 768px the style changes to this */
 @media (max-width: 768px) {
