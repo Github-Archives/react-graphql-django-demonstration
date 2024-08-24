@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useQuery, useLazyQuery } from "@apollo/client"
 import { GET_BOOKS, GET_LAST_5_MYMODELS } from "./queries"
+import MainLayout from "./layouts/MainLayout"
 import FormComponent from "./components/FormComponent"
 import ReactLeafletComponent from "./components/ReactLeafletComponent"
 import "./App.css"
@@ -43,7 +44,8 @@ function App() {
   if (error) return <p>Error :(</p>
 
   return (
-    <div>
+    // * Main Layout with Header, Footer, and Main Content is anything nested inside MainLayout
+    <MainLayout>
       <ReactLeafletComponent />
       <h1>Books</h1>
       <FormComponent />
@@ -83,7 +85,7 @@ function App() {
         //   ))}
         // </ul>
       )}
-    </div>
+    </MainLayout>
   )
 }
 
