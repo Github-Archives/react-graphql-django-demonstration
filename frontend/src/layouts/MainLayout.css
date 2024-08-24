@@ -1,15 +1,16 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f0f0f0;
+  background-color: #0047ab;
 }
 
-.main-layout {
+/* Seems to make map buggy */
+/* .main-layout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
-  color: #2d61aa;
-}
+  color: #d30b0e;
+} */
 
 .content {
   padding: 20px;
