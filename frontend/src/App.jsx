@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div>
-      <h1>React Leaflet Component</h1>
       <ReactLeafletComponent />
       <h1>Books</h1>
       <FormComponent />
