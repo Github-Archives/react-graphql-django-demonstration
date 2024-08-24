@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet"
 
 const MapLeaflet = () => {
-  const [position, setPosition] = useState([51.505, -0.09])
+  const [position, setPosition] = useState([42.2808, -83.743]) // Latitude, Longitude - Ann Arbor MI
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setPosition([position.coords.latitude, position.coords.longitude])
-      // useMap().setView([51.505, -0.09], 13)s
+      // useMap().setView([42.2808, -83.743], 13)s
     })
   }, [])
 
