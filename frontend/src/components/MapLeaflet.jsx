@@ -21,7 +21,6 @@ const MapLeaflet = () => {
         <Marker position={position}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
-            useMap().setView([51.505, -0.09], 13)
           </Popup>
         </Marker>
       </MapContainer>
