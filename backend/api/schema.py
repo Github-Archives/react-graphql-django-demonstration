@@ -2,23 +2,20 @@ import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Book, MyModel
 
+
 # Define BookType
-
-
 class BookType(DjangoObjectType):
     class Meta:
         model = Book
 
+
 # Define MyModelType
-
-
 class MyModelType(DjangoObjectType):
     class Meta:
         model = MyModel
 
+
 # Define Queries
-
-
 class Query(graphene.ObjectType):
     all_books = graphene.List(BookType)
     book_by_id = graphene.Field(BookType, id=graphene.Int())
@@ -33,9 +30,8 @@ class Query(graphene.ObjectType):
     def resolve_last5_my_models(self, info):
         return MyModel.objects.order_by('-id')[:5]
 
+
 # Define CreateMyModel Mutation
-
-
 class CreateMyModel(graphene.Mutation):
     class Arguments:
         field1 = graphene.String(required=True)
@@ -49,9 +45,8 @@ class CreateMyModel(graphene.Mutation):
         mymodel.save()
         return CreateMyModel(mymodel=mymodel)
 
+
 # Define Mutations
-
-
 class Mutation(graphene.ObjectType):
     create_mymodel = CreateMyModel.Field()
 
