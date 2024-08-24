@@ -26,11 +26,12 @@ function App() {
   return (
     // * Main Layout with Header, Footer, and Main Content is anything nested inside MainLayout
     <MainLayout>
-      {/* Map  Is Here*/}
+      {/* The Map */}
       <MapLeaflet />
 
-      {/* <h1>Books</h1> */}
-      {/* <FormComponent />
+      <FormComponent />
+
+      {/* <h1>Books</h1>
       <p>{data.book}</p>
       <ul>
         {data.allBooks.map((book) => (
@@ -40,7 +41,8 @@ function App() {
             <p>Published Date: {book.publishedDate}</p>
           </li>
         ))}
-      </ul>
+      </ul> */}
+
       <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (
@@ -53,7 +55,8 @@ function App() {
               <p>Field3: {item.field3}</p>
             </li>
           ))}
-        </ul> */}
+        </ul>
+      )}
     </MainLayout>
   )
 }
