@@ -1,6 +1,22 @@
 # React GraphQL Django Demonstration
 
+## Requirements
+
+#### Backend
+
+- Python 3.10.x
+- Django 4.2.x
+- Other dependencies are listed in `requirements.txt`
+
+#### Frontend
+
+- NPM or Yarn
+- Node
+
 This project demonstrates the integration of a Django backend with a React frontend using GraphQL. The backend is powered by Django, and the frontend is built with Vite. This guide provides steps to set up and run the project locally.
+
+Follow [Django Backend Setup](#django-backend-setup) and [React Frontend Setup](#react-frontend-setup).
+You'll need to run both Backend and Frontend seperately for the app to function properly.
 
 ## Django Backend Setup
 
@@ -12,7 +28,7 @@ Navigate to the backend directory:
 cd react-graphql-django-demonstration/backend/
 ```
 
-Create a virtual environment:
+Create a virtual environment with `venv`:
 
 ```bash
 python3 -m venv .venv
@@ -20,14 +36,16 @@ python3 -m venv .venv
 
 Activate the virtual environment:
 
+_macOS/Linux Activate_
+
 ```bash
 source .venv/bin/activate
 ```
 
-Alternatively, activate **My** specific local virtual environment _(personal reminder)_:
+_Windows Activate_
 
 ```bash
-source django6/bin/activate
+.\.venv\Scripts\Activate
 ```
 
 ### 2. Install Dependencies
@@ -161,7 +179,9 @@ Visit `http://127.0.0.1:8000/` to see the Django app in action.
 
 ---
 
-## React Frontend Setup (Built with Vite)
+## React Frontend Setup
+
+_(Built with Vite)_
 
 ### 1. Install Dependencies
 
@@ -173,16 +193,31 @@ cd react-graphql-django-demonstration/frontend/
 
 Install the project dependencies:
 
+Yarn:
+
 ```bash
 yarn
+```
+
+NPM:
+
+```bash
+npm install
 ```
 
 ### 2. Start the Frontend
 
 Start the development server:
+Yarn:
 
 ```bash
 yarn dev
+```
+
+NPM:
+
+```bash
+npm dev
 ```
 
 Visit `http://localhost:5173/` to see the React app in action. If the backend is also running, the frontend will connect to it and display data from the database.
