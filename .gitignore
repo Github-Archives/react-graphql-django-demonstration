@@ -2,8 +2,8 @@
 
 **__pycache__/
 
-# Django .venv
-backend/django6/
+# Python virtual environment
+backend/.venv/
 
 # sensitive settings.py
 **settings.py
