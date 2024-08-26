@@ -10,7 +10,8 @@
 
 #### Frontend
 
--
+- NPM or Yarn
+- Node
 
 This project demonstrates the integration of a Django backend with a React frontend using GraphQL. The backend is powered by Django, and the frontend is built with Vite. This guide provides steps to set up and run the project locally.
 
