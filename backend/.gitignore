@@ -1,0 +1,7 @@
+# Backend ignore settings
+
+# Python virtual environment
+.venv/
+
+# sensitive settings.py
+**settings.py

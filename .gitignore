@@ -1,12 +1,6 @@
-# * BACK-END
+# Global ignore settings
 
 **__pycache__/
-
-# Python virtual environment
-backend/.venv/
-
-# sensitive settings.py
-**settings.py
 
 # environment variables
 .env
