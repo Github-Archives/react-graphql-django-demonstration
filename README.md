@@ -15,7 +15,7 @@
 This project demonstrates the integration of a Django backend with a React frontend using GraphQL. The backend is powered by Django, and the frontend is built with Vite. This guide provides steps to set up and run the project locally.
 
 Follow [Django Backend Setup](#django-backend-setup) and [React Frontend Setup](#react-frontend-setup).
-You'll need to run both Backend and Frontend Seperately for the app to function properly.
+You'll need to run both Backend and Frontend seperately for the app to function properly.
 
 ## Django Backend Setup
 
@@ -178,7 +178,9 @@ Visit `http://127.0.0.1:8000/` to see the Django app in action.
 
 ---
 
-## React Frontend Setup (Built with Vite)
+## React Frontend Setup
+
+_(Built with Vite)_
 
 ### 1. Install Dependencies
 
