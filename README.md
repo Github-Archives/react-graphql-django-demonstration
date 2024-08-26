@@ -217,7 +217,7 @@ yarn dev
 NPM:
 
 ```bash
-npm dev
+npm run dev
 ```
 
 Visit `http://localhost:5173/` to see the React app in action. If the backend is also running, the frontend will connect to it and display data from the database.
