@@ -5,3 +5,6 @@
 
 # sensitive settings.py
 **settings.py
+
+# database migrations
+migrations/
