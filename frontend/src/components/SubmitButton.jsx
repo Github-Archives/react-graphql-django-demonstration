@@ -1,7 +1,7 @@
 // SubmitButton.jsx
 
 import React from "react"
-import { useMutation } from "@apollo/client"
+import { useMutation } from "@apollo/react-hooks"
 import { gql } from "apollo-boost"
 
 const SUBMIT_BLOOD_TYPE = gql`

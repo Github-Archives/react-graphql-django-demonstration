@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.11.4",
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-boost": "^0.4.9",
     "graphql": "^16.9.0",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
