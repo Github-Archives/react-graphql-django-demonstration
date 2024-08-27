@@ -6,6 +6,7 @@ import FormComponent from "./components/FormComponent"
 import MapComponent from "./components/MapComponent"
 import DropdownBloodtype from "./components/DropdownBloodtype"
 import DropdownCounty from "./components/DropdownCounty"
+import SubmitButton from "./components/SubmitButton"
 import "./App.css"
 import "leaflet/dist/leaflet.css"
 
@@ -44,6 +45,7 @@ function App() {
 
       <DropdownBloodtype />
       <DropdownCounty />
+      <SubmitButton />
       {/* <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (

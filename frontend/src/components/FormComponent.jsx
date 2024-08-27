@@ -1,25 +1,29 @@
 import { useState, useEffect } from "react"
-import { useMutation } from "@apollo/client"
-import {
-  ADD_MYMODEL,
-  GET_BOOKS,
-  GET_LAST_5_MYMODELS,
-  GET_BLOOD_TYPES,
-} from "../queries"
+// import { useMutation } from "@apollo/client"
+// import {
+//   ADD_MYMODEL,
+//   GET_BOOKS,
+//   GET_LAST_5_MYMODELS,
+//   GET_BLOOD_TYPES,
+// } from "../queries"
 
-import DropdownBloodtype from "./DropdownBloodtype"
-import DropdownCounty from "./DropdownCounty"
+// import DropdownBloodtype from "./DropdownBloodtype"
+// import DropdownCounty from "./DropdownCounty"
+
+import SubmitButton from "./SubmitButton"
 
 const FormComponent = () => {
-  const [selectedOption1, setSelectedOption1] = useState("")
-  const [selectedOption2, setSelectedOption2] = useState("")
-  const [addMyModel] = useMutation(ADD_MYMODEL, {
-    refetchQueries: [
-      { query: GET_BOOKS },
-      { query: GET_LAST_5_MYMODELS },
-      { query: GET_BLOOD_TYPES },
-    ],
-  })
+  const [selectedBloodTypeId, setSelectedBloodTypeId] = useState(null)
+
+  // const [selectedOption1, setSelectedOption1] = useState("")
+  // const [selectedOption2, setSelectedOption2] = useState("")
+  // const [addMyModel] = useMutation(ADD_MYMODEL, {
+  //   refetchQueries: [
+  //     { query: GET_BOOKS },
+  //     { query: GET_LAST_5_MYMODELS },
+  //     { query: GET_BLOOD_TYPES },
+  //   ],
+  // })
 
   // const handleSubmit = () => {
   // Send a POST request to your backend API with selectedOption1 and selectedOption2
@@ -34,43 +38,52 @@ const FormComponent = () => {
   //   })
   // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    try {
-      await addMyModel({
-        variables: { field1: selectedOption1, field2: selectedOption2 },
-      })
-      console.log("Data submitted successfully")
-    } catch (error) {
-      console.error("Error:", error)
-    }
+  const handleDropdownChange = (event) => {
+    setSelectedBloodTypeId(event.target.value)
   }
 
-  useEffect(() => {
-    console.log("FormComponent loaded")
-  }, [])
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   try {
+  //     await addMyModel({
+  //       variables: { field1: selectedOption1, field2: selectedOption2 },
+  //     })
+  //     console.log("Data submitted successfully")
+  //   } catch (error) {
+  //     console.error("Error:", error)
+  //   }
+  // }
 
-  useEffect(() => {
-    console.log("\nFormComponent loaded {selectedOption1}")
-  }, [selectedOption1])
+  // useEffect(() => {
+  //   console.log("FormComponent loaded")
+  // }, [])
+
+  // useEffect(() => {
+  //   console.log("\nFormComponent loaded {selectedOption1}")
+  // }, [selectedOption1])
 
   return (
     <div>
-      <DropdownBloodtype
+      <h3>Total County Population</h3>
+      {/* <DropdownBloodtype
         name="bloodTypeDropdown"
         selectedOption={selectedOption1}
         onChange={setSelectedOption1}
         // onChange={handleChange}
         value={selectedOption1.field1}
       />
-
       <DropdownCounty
         selectedOption={selectedOption2}
         onChange={setSelectedOption2}
-      />
-      <form onSubmit={handleSubmit}>
+      /> */}
+      {/* <form onSubmit={handleSubmit}>
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
+
+      <select onChange={handleDropdownChange}>
+        {/* Render your dropdown options here */}
+      </select>
+      <SubmitButton bloodTypeId={selectedBloodTypeId} />
     </div>
   )
 }
