@@ -2,8 +2,10 @@ import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Book, MyModel, BloodTypes
 
-
+# * Define Types:
 # Blood Type
+
+
 class BloodType(DjangoObjectType):
     class Meta:
         model = BloodTypes
@@ -21,7 +23,7 @@ class MyModelType(DjangoObjectType):
         model = MyModel
 
 
-# Define Queries
+# * Define Queries:
 class Query(graphene.ObjectType):
     all_books = graphene.List(BookType)
     book_by_id = graphene.Field(BookType, id=graphene.Int())
