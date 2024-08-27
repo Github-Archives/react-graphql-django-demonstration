@@ -7,14 +7,14 @@ from channels.layers import get_channel_layer
 class BloodTypes(models.Model):
     county_name = models.CharField(max_length=100)
     population = models.IntegerField()
-    o_plus = models.DecimalField(decimal_places=3)
-    a_plus = models.DecimalField(decimal_places=3)
-    b_plus = models.DecimalField(decimal_places=3)
-    ab_plus = models.DecimalField(decimal_places=3)
-    o_minus = models.DecimalField(decimal_places=3)
-    a_minus = models.DecimalField(decimal_places=3)
-    b_minus = models.DecimalField(decimal_places=3)
-    ab_minus = models.DecimalField(decimal_places=3)
+    o_plus = models.DecimalField(max_digits=8, decimal_places=3)
+    a_plus = models.DecimalField(max_digits=8, decimal_places=3)
+    b_plus = models.DecimalField(max_digits=8, decimal_places=3)
+    ab_plus = models.DecimalField(max_digits=8, decimal_places=3)
+    o_minus = models.DecimalField(max_digits=8, decimal_places=3)
+    a_minus = models.DecimalField(max_digits=8, decimal_places=3)
+    b_minus = models.DecimalField(max_digits=8, decimal_places=3)
+    ab_minus = models.DecimalField(max_digits=8, decimal_places=3)
 
     def __str__(self):
         return self.county_name

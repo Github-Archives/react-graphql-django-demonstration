@@ -28,6 +28,7 @@ class Query(graphene.ObjectType):
     all_books = graphene.List(BookType)
     book_by_id = graphene.Field(BookType, id=graphene.Int())
     last5_my_models = graphene.List(MyModelType)
+    county_blood_types = graphene.List(BloodType)
 
     def resolve_all_books(self, info):
         return Book.objects.all()
@@ -37,6 +38,11 @@ class Query(graphene.ObjectType):
 
     def resolve_last5_my_models(self, info):
         return MyModel.objects.order_by('-id')[:5]
+
+    def resolve_county_blood_types(self, info):
+        return BloodTypes.objects.all()
+
+# * Blood Types
 
 
 # Define CreateMyModel Mutation
