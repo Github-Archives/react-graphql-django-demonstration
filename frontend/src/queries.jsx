@@ -1,5 +1,13 @@
 import { gql } from "@apollo/client"
 
+export const GET_BLOOD_TYPES = gql`
+  query GetBloodTypes {
+    allBloodTypes {
+      bloodType
+    }
+  }
+`
+
 export const GET_BOOKS = gql`
   query GetBooks {
     allBooks {

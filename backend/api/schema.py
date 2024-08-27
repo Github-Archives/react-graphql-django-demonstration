@@ -2,10 +2,10 @@ import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Book, MyModel, BloodTypes
 
+
 # * Define Types:
-# Blood Type
 
-
+# Define Blood Type
 class BloodType(DjangoObjectType):
     class Meta:
         model = BloodTypes
@@ -39,10 +39,10 @@ class Query(graphene.ObjectType):
     def resolve_last5_my_models(self, info):
         return MyModel.objects.order_by('-id')[:5]
 
+# * Blood Types
+# * Retured when the query is called
     def resolve_county_blood_types(self, info):
         return BloodTypes.objects.all()
-
-# * Blood Types
 
 
 # Define CreateMyModel Mutation
