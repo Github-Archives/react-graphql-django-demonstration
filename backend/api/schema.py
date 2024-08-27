@@ -2,9 +2,8 @@ import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Book, MyModel, BloodTypes
 
+
 # Blood Type
-
-
 class BloodType(DjangoObjectType):
     class Meta:
         model = BloodTypes
