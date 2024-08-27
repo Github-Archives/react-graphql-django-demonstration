@@ -19,9 +19,8 @@ class BloodTypes(models.Model):
     def __str__(self):
         return self.county_name
 
-# * Test Book Model
 
-
+# * Book Model
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
@@ -31,7 +30,7 @@ class Book(models.Model):
         return self.title
 
 
-# * Test MyModel Model
+# * MyModel Model
 class MyModel(models.Model):
     field1 = models.CharField(max_length=100)
     field2 = models.CharField(max_length=100)

@@ -4,6 +4,7 @@ import { GET_BOOKS, GET_LAST_5_MYMODELS } from "./queries"
 import MainLayout from "./layouts/MainLayout"
 import FormComponent from "./components/FormComponent"
 import MapComponent from "./components/MapComponent"
+import DropdownComponent from "./components/DropdownComponent"
 import "./App.css"
 import "leaflet/dist/leaflet.css"
 
@@ -27,10 +28,8 @@ function App() {
   return (
     // * Main Layout with Header, Footer, and Main Content is anything nested inside MainLayout
     <MainLayout>
-      {/* The Map */}
-      <MapComponent />
       <FormComponent />
-      <h1>Books</h1>
+      {/* <h1>Books</h1>
       <p>{data.book}</p>
       <ul>
         {data.allBooks.map((book) => (
@@ -40,8 +39,10 @@ function App() {
             <p>Published Date: {book.publishedDate}</p>
           </li>
         ))}
-      </ul>
-      <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
+      </ul> */}
+
+      <DropdownComponent />
+      {/* <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}
       {last5Data && (
         <ul>
@@ -54,7 +55,9 @@ function App() {
             </li>
           ))}
         </ul>
-      )}
+      )} */}
+
+      {/* <MapComponent /> */}
     </MainLayout>
   )
 }
