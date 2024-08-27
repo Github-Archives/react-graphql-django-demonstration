@@ -3,8 +3,25 @@ from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 
 
-# Create your models here...
 # Every class Model is a new table in the database
+class BloodTypes(models.Model):
+    county_name = models.CharField(max_length=100)
+    population = models.IntegerField()
+    o_plus = models.DecimalField(decimal_places=3)
+    a_plus = models.DecimalField(decimal_places=3)
+    b_plus = models.DecimalField(decimal_places=3)
+    ab_plus = models.DecimalField(decimal_places=3)
+    o_minus = models.DecimalField(decimal_places=3)
+    a_minus = models.DecimalField(decimal_places=3)
+    b_minus = models.DecimalField(decimal_places=3)
+    ab_minus = models.DecimalField(decimal_places=3)
+
+    def __str__(self):
+        return self.county_name
+
+
+#     description = models.TextField()
+
 # * Test Book Model
 class Book(models.Model):
     title = models.CharField(max_length=200)
