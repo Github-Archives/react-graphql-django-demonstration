@@ -1,5 +1,5 @@
 # Global ignore settings
-
+assets/*
 **__pycache__/
 
 # environment variables
