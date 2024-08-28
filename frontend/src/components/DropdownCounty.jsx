@@ -6,7 +6,9 @@ const DropdownCounty = () => {
 
   return (
     <div>
-      <label htmlFor="countyDropdown">Select County</label>
+      <label htmlFor="countyDropdown" className="blood-type-text">
+        Select County
+      </label>
       <select>
         {counties.map((county, index) => (
           <option key={index} value={county}>

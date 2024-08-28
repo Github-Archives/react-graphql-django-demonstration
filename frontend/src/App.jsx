@@ -44,7 +44,9 @@ function App() {
       </ul> */}
 
       <DropdownBloodtype />
+      <br />
       <DropdownCounty />
+      <br />
       <SubmitButton />
       {/* <button onClick={() => getLast5MyModels()}>Show Last 5 Entries</button>
       {loadingLast5 && <p>Loading last 5 entries...</p>}

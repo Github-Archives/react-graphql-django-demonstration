@@ -2,7 +2,9 @@ const DropdownBloodtype = () => {
   return (
     <div>
       <h1>Michigan Blood Match</h1>
-      <label htmlFor="bloodTypeDropdown">Select Blood Type</label>
+      <label htmlFor="bloodTypeDropdown" className="blood-type-text">
+        Select Blood Type
+      </label>
       <select>
         <option value="o-plus">O+</option>
         <option value="a-plus">A+</option>
